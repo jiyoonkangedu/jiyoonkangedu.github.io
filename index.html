@@ -173,8 +173,8 @@
             </article>
           </div>
 
-          <button class="show-more-button" id="pub-toggle" type="button" aria-expanded="false" aria-controls="extra-pubs">
-            Show more +
+          <button class="more-toggle" id="pub-toggle" type="button" aria-expanded="false" aria-controls="extra-pubs">
+            More +
           </button>
         </div>
       </div>
@@ -236,11 +236,11 @@
 
       if (isOpen) {
         extraPubs.setAttribute("hidden", "");
-        pubToggle.textContent = "Show more +";
+        pubToggle.textContent = "More +";
         pubToggle.setAttribute("aria-expanded", "false");
       } else {
         extraPubs.removeAttribute("hidden");
-        pubToggle.textContent = "Show less −";
+        pubToggle.textContent = "Less −";
         pubToggle.setAttribute("aria-expanded", "true");
       }
     });
