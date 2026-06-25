@@ -76,25 +76,26 @@ nav a:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 285px 1fr;
-  gap: 38px;
+  grid-template-columns: 260px 560px;
+  gap: 32px;
   align-items: start;
+  justify-content: start;
 }
 
 .profile-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 15px;
+  padding: 14px;
   box-shadow: 0 12px 30px rgba(31, 37, 35, 0.05);
-  width: 285px;
+  width: 260px;
 }
 
 .profile-photo {
   width: 100%;
-  height: 285px;
+  height: 275px;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 14%;
   border-radius: 13px;
   border: 1px solid var(--line);
   display: block;
@@ -104,7 +105,7 @@ nav a:hover {
 
 .photo-placeholder {
   width: 100%;
-  height: 285px;
+  height: 275px;
   border-radius: 13px;
   background: linear-gradient(135deg, #e8e3d8, #f7f4ee);
   border: 1px solid var(--line);
@@ -157,7 +158,7 @@ h1 {
 
 .hero-text {
   font-size: 0.95rem;
-  max-width: 600px;
+  max-width: 560px;
   color: #38403c;
   margin: 0;
 }
@@ -311,8 +312,8 @@ h1 {
 }
 
 .pub-list > .pub-item:nth-of-type(3) {
-  border-bottom: none;
-  padding-bottom: 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
 }
 
 .pub-year {
@@ -338,9 +339,8 @@ h1 {
 .extra-pubs {
   display: grid;
   gap: 18px;
-  border-top: 1px solid var(--line);
   padding-top: 18px;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .extra-pubs[hidden] {
@@ -352,7 +352,8 @@ h1 {
   padding-bottom: 0;
 }
 
-.show-more-button {
+.more-toggle {
+  cursor: pointer;
   width: fit-content;
   border: none;
   background: transparent;
@@ -360,13 +361,12 @@ h1 {
   font-family: inherit;
   font-weight: 600;
   font-size: 0.76rem;
-  padding: 0;
-  margin-top: 2px;
   border-bottom: 1px solid var(--line);
-  cursor: pointer;
+  margin-top: 2px;
+  padding: 0;
 }
 
-.show-more-button:hover {
+.more-toggle:hover {
   color: var(--accent);
 }
 
@@ -449,7 +449,7 @@ footer p {
   }
 
   .profile-card {
-    width: 285px;
+    width: 260px;
   }
 
   .pub-item,
