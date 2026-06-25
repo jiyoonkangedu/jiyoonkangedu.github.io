@@ -75,20 +75,19 @@ nav a:hover {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 260px 560px;
-  gap: 32px;
-  align-items: start;
-  justify-content: start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 28px;
 }
 
 .profile-card {
+  flex: 0 0 260px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 14px;
   box-shadow: 0 12px 30px rgba(31, 37, 35, 0.05);
-  width: 260px;
 }
 
 .profile-photo {
@@ -128,6 +127,12 @@ nav a:hover {
 .profile-line a {
   color: var(--accent-dark);
   border-bottom: 1px solid var(--line);
+}
+
+.hero-main {
+  flex: 0 1 560px;
+  max-width: 560px;
+  padding-top: 2px;
 }
 
 .eyebrow {
@@ -311,11 +316,6 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
-.pub-list > .pub-item:nth-of-type(3) {
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 18px;
-}
-
 .pub-year {
   font-weight: 700;
   color: var(--accent);
@@ -339,12 +339,16 @@ h1 {
 .extra-pubs {
   display: grid;
   gap: 18px;
-  padding-top: 18px;
+  padding-top: 0;
   margin-top: 0;
 }
 
 .extra-pubs[hidden] {
   display: none;
+}
+
+.extra-pubs .pub-item {
+  padding-top: 0;
 }
 
 .extra-pubs .pub-item:last-child {
@@ -355,19 +359,20 @@ h1 {
 .more-toggle {
   cursor: pointer;
   width: fit-content;
-  border: none;
-  background: transparent;
+  border: 1px solid var(--line);
+  background: var(--card);
   color: var(--accent-dark);
   font-family: inherit;
   font-weight: 600;
-  font-size: 0.76rem;
-  border-bottom: 1px solid var(--line);
-  margin-top: 2px;
-  padding: 0;
+  font-size: 0.84rem;
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin-top: 0;
 }
 
 .more-toggle:hover {
-  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--soft);
 }
 
 .timeline {
@@ -442,14 +447,23 @@ footer p {
     padding: 42px 0 34px;
   }
 
-  .hero-grid,
-  .two-column {
-    grid-template-columns: 1fr;
+  .hero-grid {
+    flex-direction: column;
     gap: 28px;
   }
 
   .profile-card {
+    flex-basis: auto;
     width: 260px;
+  }
+
+  .hero-main {
+    max-width: 100%;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .pub-item,
