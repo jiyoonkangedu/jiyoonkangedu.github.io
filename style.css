@@ -201,13 +201,15 @@ h1 {
 
 .profile-photo {
   width: 100%;
-  aspect-ratio: 1 / 1.12;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  object-position: center top;
   border-radius: 14px;
   border: 1px solid var(--line);
   display: block;
   margin-bottom: 14px;
+  background: var(--soft);
 }
 
 .profile-name {
