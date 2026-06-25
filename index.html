@@ -29,6 +29,15 @@
   <main>
     <section id="home" class="hero">
       <div class="container hero-grid">
+        <aside class="profile-card">
+          <img src="assets/profile.jpg" alt="Portrait of Jiyoon Kang" class="profile-photo" />
+
+          <p class="profile-line">
+            <a href="mailto:kang.1471@osu.edu">kang.1471@osu.edu</a>
+          </p>
+          <p class="profile-line">Arps Hall 229A</p>
+        </aside>
+
         <div class="hero-main">
           <p class="eyebrow">Ph.D. Student · Dramatic and Arts-Based Research</p>
 
@@ -55,15 +64,6 @@
             <a class="button secondary" href="assets/Jiyoon_Kang_CV.pdf" target="_blank">CV</a>
           </div>
         </div>
-
-        <aside class="profile-card">
-          <img src="assets/profile.jpg" alt="Portrait of Jiyoon Kang" class="profile-photo" />
-
-          <p class="profile-line">
-            <a href="mailto:kang.1471@osu.edu">kang.1471@osu.edu</a>
-          </p>
-          <p class="profile-line">Arps Hall 229A</p>
-        </aside>
       </div>
     </section>
 
@@ -127,7 +127,7 @@
             <p class="pub-year">2026</p>
             <div>
               <h3>A Systematic Review of Arts Integration in Elementary STEAM Education</h3>
-              <p>Kang, J., &amp; Min, B. Paper presented at the American Educational Research Association (AERA) Annual Meeting, SIG-Arts and Learning, Los Angeles, CA.</p>
+              <p><strong>Kang, J.</strong>, &amp; Min, B. Paper presented at the American Educational Research Association (AERA) Annual Meeting, SIG-Arts and Learning, Los Angeles, CA.</p>
             </div>
           </article>
 
@@ -135,7 +135,7 @@
             <p class="pub-year">2026</p>
             <div>
               <h3>Negotiating Tensions in Literacy Instruction in a Community-Based Korean Heritage Classroom in the United States</h3>
-              <p>Brief report. <em>Journal of Education for Multilingualism.</em></p>
+              <p><strong>Kang, J.</strong> Brief report. <em>Journal of Education for Multilingualism.</em></p>
             </div>
           </article>
 
@@ -143,18 +143,16 @@
             <p class="pub-year">2026</p>
             <div>
               <h3>Negotiating Literacy Tensions: A Teacher Inquiry Using the Four Resources Model</h3>
-              <p>Kang, J. Paper presented at the American Association of Teachers of Korean (AATK) Annual Conference, Columbus, OH.</p>
+              <p><strong>Kang, J.</strong> Paper presented at the American Association of Teachers of Korean (AATK) Annual Conference, Columbus, OH.</p>
             </div>
           </article>
 
-          <details class="more-list">
-            <summary>More</summary>
-
+          <div id="extra-pubs" class="extra-pubs" hidden>
             <article class="pub-item">
               <p class="pub-year">2026</p>
               <div>
                 <h3>Bringing Literature and Social Studies to Life: Dramatic Inquiry in the Middle Grades</h3>
-                <p>Edmiston, B., &amp; Kang, J. Workshop presented at the Ohio Council of Teachers of English Language Arts (OCTELA) Annual Conference, Newark, OH.</p>
+                <p>Edmiston, B., &amp; <strong>Kang, J.</strong> Workshop presented at the Ohio Council of Teachers of English Language Arts (OCTELA) Annual Conference, Newark, OH.</p>
               </div>
             </article>
 
@@ -162,7 +160,7 @@
               <p class="pub-year">2025</p>
               <div>
                 <h3>Is Art Marginalized in STEAM? A Systematic Review of Types, Interventions, and Outcomes of Art in STEAM Education</h3>
-                <p>Poster presentation. EHE Research Forum, The Ohio State University.</p>
+                <p><strong>Kang, J.</strong> Poster presentation. EHE Research Forum, The Ohio State University.</p>
               </div>
             </article>
 
@@ -170,10 +168,14 @@
               <p class="pub-year">2023</p>
               <div>
                 <h3>A Study of Signs Based on the Experiential Characteristics of Drama</h3>
-                <p><em>Journal of Korea Association for Drama/Theatre and Education.</em></p>
+                <p><strong>Kang, J.</strong> <em>Journal of Korea Association for Drama/Theatre and Education.</em></p>
               </div>
             </article>
-          </details>
+          </div>
+
+          <button class="show-more-button" id="pub-toggle" type="button" aria-expanded="false" aria-controls="extra-pubs">
+            Show more +
+          </button>
         </div>
       </div>
     </section>
@@ -224,5 +226,24 @@
       <p>© 2026 Jiyoon Kang. Built with GitHub Pages.</p>
     </div>
   </footer>
+
+  <script>
+    const pubToggle = document.getElementById("pub-toggle");
+    const extraPubs = document.getElementById("extra-pubs");
+
+    pubToggle.addEventListener("click", () => {
+      const isOpen = !extraPubs.hasAttribute("hidden");
+
+      if (isOpen) {
+        extraPubs.setAttribute("hidden", "");
+        pubToggle.textContent = "Show more +";
+        pubToggle.setAttribute("aria-expanded", "false");
+      } else {
+        extraPubs.removeAttribute("hidden");
+        pubToggle.textContent = "Show less −";
+        pubToggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  </script>
 </body>
 </html>
