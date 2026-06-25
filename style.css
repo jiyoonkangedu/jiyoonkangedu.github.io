@@ -31,7 +31,7 @@ a {
 }
 
 .container {
-  width: min(1080px, 92%);
+  width: min(1040px, 92%);
   margin: 0 auto;
 }
 
@@ -39,7 +39,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251, 250, 247, 0.92);
+  background: rgba(251, 250, 247, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -48,7 +48,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  padding: 16px 0;
 }
 
 .logo {
@@ -60,7 +60,7 @@ a {
 nav {
   display: flex;
   gap: 22px;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--muted);
 }
 
@@ -69,21 +69,21 @@ nav a:hover {
 }
 
 .hero {
-  padding: 110px 0 90px;
+  padding: 86px 0 72px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 1.45fr 0.65fr;
+  gap: 64px;
+  align-items: start;
 }
 
 .eyebrow,
 .section-label {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--accent);
   font-weight: 700;
   margin-bottom: 14px;
@@ -91,29 +91,48 @@ nav a:hover {
 
 h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-  margin: 0 0 20px;
+  font-size: clamp(2.75rem, 5.4vw, 4.7rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  margin: 0 0 18px;
 }
 
 .hero h2 {
-  font-size: 1.35rem;
+  font-size: 1.08rem;
   font-weight: 500;
   color: var(--muted);
-  margin: 0 0 26px;
+  line-height: 1.55;
+  margin: 0 0 24px;
 }
 
 .hero-text {
-  font-size: 1.25rem;
-  max-width: 680px;
-  color: #38413d;
+  font-size: 1.08rem;
+  max-width: 720px;
+  color: #37413d;
+  margin: 0;
+}
+
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.interest-list span {
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .button-row {
   display: flex;
-  gap: 14px;
-  margin-top: 34px;
+  gap: 12px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
@@ -121,9 +140,10 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 19px;
+  padding: 10px 17px;
   border-radius: 999px;
   font-weight: 650;
+  font-size: 0.95rem;
   border: 1px solid var(--accent);
   transition: 0.2s ease;
 }
@@ -149,38 +169,47 @@ h1 {
 .profile-card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 28px;
-  padding: 34px;
-  box-shadow: 0 24px 60px rgba(31, 37, 35, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(31, 37, 35, 0.07);
 }
 
-.initials {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: var(--soft);
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1.12;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e8e3d8, #f7f4ee);
+  border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 3.2rem;
-  color: var(--accent);
-  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 .profile-name {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+  font-weight: 750;
+  font-size: 1.02rem;
+  margin: 0 0 10px;
+  color: var(--text);
 }
 
-.profile-desc {
+.profile-line {
+  font-size: 0.92rem;
   color: var(--muted);
-  margin-bottom: 0;
+  margin: 4px 0;
+}
+
+.profile-line a {
+  color: var(--accent-dark);
+  border-bottom: 1px solid var(--line);
 }
 
 .section {
-  padding: 88px 0;
+  padding: 78px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -190,55 +219,77 @@ h1 {
 
 .two-column {
   display: grid;
-  grid-template-columns: 0.8fr 1.4fr;
+  grid-template-columns: 0.75fr 1.35fr;
   gap: 64px;
 }
 
 .section h2 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.1;
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  line-height: 1.12;
   letter-spacing: -0.04em;
   margin: 0 0 28px;
 }
 
 .section p {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   color: #37413d;
 }
 
-.card-grid {
+.simple-interest-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 34px;
+  gap: 14px;
+  margin-top: 30px;
 }
 
-.card {
+.simple-interest-grid div {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  min-height: 112px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--accent-dark);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.teaching-list {
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.teaching-item {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 30px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 22px;
   padding: 24px;
 }
 
-.card h3 {
-  margin: 0 0 12px;
+.teaching-item h3 {
+  margin: 0;
   color: var(--accent-dark);
+  line-height: 1.35;
 }
 
-.card p {
+.teaching-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.98rem;
 }
 
-.clean-list {
-  padding-left: 20px;
-  color: #37413d;
-}
-
-.clean-list li {
-  margin-bottom: 8px;
+.term {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem !important;
+  font-weight: 700;
+  color: var(--accent) !important;
+  margin-bottom: 10px !important;
 }
 
 .pub-list {
@@ -341,16 +392,17 @@ footer {
   }
 
   .hero {
-    padding: 76px 0 70px;
+    padding: 64px 0 58px;
   }
 
   .hero-grid,
-  .two-column {
+  .two-column,
+  .teaching-item {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
 
-  .card-grid {
+  .simple-interest-grid {
     grid-template-columns: 1fr;
   }
 
@@ -360,9 +412,7 @@ footer {
     gap: 8px;
   }
 
-  .initials {
-    width: 120px;
-    height: 120px;
-    font-size: 2.5rem;
+  .profile-card {
+    max-width: 340px;
   }
 }
