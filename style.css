@@ -71,13 +71,13 @@ nav a:hover {
 }
 
 .hero {
-  padding: 54px 0 42px;
+  padding: 48px 0 36px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.45fr 0.55fr;
-  gap: 54px;
+  grid-template-columns: 1.48fr 0.48fr;
+  gap: 48px;
   align-items: start;
 }
 
@@ -104,12 +104,12 @@ h1 {
   font-weight: 500;
   color: var(--muted);
   line-height: 1.5;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 }
 
 .hero-text {
-  font-size: 0.96rem;
-  max-width: 670px;
+  font-size: 0.95rem;
+  max-width: 650px;
   color: #38403c;
   margin: 0;
 }
@@ -118,9 +118,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  margin-top: 20px;
+  margin-top: 18px;
   color: var(--accent-dark);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -141,7 +141,7 @@ h1 {
 .button-row {
   display: flex;
   gap: 10px;
-  margin-top: 24px;
+  margin-top: 22px;
   flex-wrap: wrap;
 }
 
@@ -179,13 +179,15 @@ h1 {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 16px 40px rgba(31, 37, 35, 0.06);
+  padding: 16px;
+  box-shadow: 0 14px 34px rgba(31, 37, 35, 0.055);
+  max-width: 230px;
+  justify-self: end;
 }
 
 .photo-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1.12;
+  height: 210px;
   border-radius: 14px;
   background: linear-gradient(135deg, #e8e3d8, #f7f4ee);
   border: 1px solid var(--line);
@@ -196,33 +198,32 @@ h1 {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .profile-photo {
   width: 100%;
-  height: auto;
-  max-height: 320px;
+  height: 210px;
   object-fit: contain;
   object-position: center top;
   border-radius: 14px;
   border: 1px solid var(--line);
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   background: var(--soft);
 }
 
 .profile-name {
   font-weight: 700;
-  font-size: 0.94rem;
-  margin: 0 0 8px;
+  font-size: 0.92rem;
+  margin: 0 0 7px;
   color: var(--text);
 }
 
 .profile-line {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 .profile-line a {
@@ -235,7 +236,7 @@ h1 {
 }
 
 .compact-section {
-  padding: 42px 0;
+  padding: 38px 0;
 }
 
 .section.alt {
@@ -318,7 +319,7 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
-.pub-item:last-child {
+.pub-list > .pub-item:nth-of-type(3) {
   border-bottom: none;
   padding-bottom: 0;
 }
@@ -341,6 +342,45 @@ h1 {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.more-list {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.more-list summary {
+  cursor: pointer;
+  width: fit-content;
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.86rem;
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 18px;
+}
+
+.more-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.more-list summary::after {
+  content: " +";
+  color: var(--accent);
+}
+
+.more-list[open] summary::after {
+  content: " −";
+}
+
+.more-list .pub-item {
+  margin-top: 18px;
+}
+
+.more-list .pub-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .timeline {
@@ -377,7 +417,7 @@ h1 {
   display: flex;
   gap: 9px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .contact-links a {
@@ -412,7 +452,7 @@ footer p {
   }
 
   .hero {
-    padding: 44px 0 36px;
+    padding: 42px 0 34px;
   }
 
   .hero-grid,
@@ -422,7 +462,8 @@ footer p {
   }
 
   .profile-card {
-    max-width: 300px;
+    max-width: 230px;
+    justify-self: start;
   }
 
   .pub-item,
